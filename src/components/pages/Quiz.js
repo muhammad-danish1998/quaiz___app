@@ -77,6 +77,7 @@ const Quiz = () => {
 		} else {
 			setShowScore(true);
 		}
+	
 	};
 
 	return (
@@ -85,7 +86,12 @@ const Quiz = () => {
 			<div className="quiz">
 				{showScore ? (
 					<div className='score-section'>
-						You scored {score} out of {questions.length}<br />
+					
+					{
+						score === 1 ? `you have scored ${score} of ${questions.length} so you should study a Partner course such as Dance.` : score ===  2 ? `you have scored ${score} of ${questions.length} so you should study an Social science Degree.`: score === 3 ? `you have scored ${score} of ${questions.length} so you should study an Creative Industry Degree` : score === 4 ? `you have scored ${score} of ${questions.length} so you should study an Business Degree.`: score === 5 ? `you have scored ${score} of ${questions.length} so you should study an Education Degree`: score === 6 ? `you have scored ${score} of ${questions.length} so you should study an Technology  Degree`: score === 0 ? "please do the quiz so you can get a result because you haven't scored a mark":""
+					}
+					<br />
+						{/* You scored {score} out of {questions.length}<br /> */}
 
 						<Link className="" to="/">
 							<button className="butn">
